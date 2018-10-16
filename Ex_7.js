@@ -24,9 +24,6 @@ for(var i=0;i<library.length;i++){
     console.log(library[i]);
 }
 
-console.log("end of question 7");
-console.log("\n");
-
 }
 
 ques7();

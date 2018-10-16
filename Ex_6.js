@@ -15,8 +15,6 @@ function ques6(array1,array2){
     for(var i=0;i<result.length;i++){
         console.log(result[i]);
     }
-    console.log("end of question 6 ");
-        console.log("\n");
     
 }
 

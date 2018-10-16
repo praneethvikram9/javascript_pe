@@ -9,8 +9,6 @@ function ques12(string,char){
         }
     }
     console.log(" number of times "+char+ " occured in "+string+" is "+count);
-    console.log("end of question 12");
-    console.log("\n");
 
 }
 ques12('gmail.com', 'm');

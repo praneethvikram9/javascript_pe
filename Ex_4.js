@@ -2,14 +2,11 @@
 
 //sorting strings in alphabetical order (ascending)
 function ques4(array){
-    console.log("question:4");
     var len = array.length;
     array=sort_arr(array);
     for(i=0;i<len;i++){
         console.log(array[i]);
     }
-    console.log("end of question 4 ");
-    console.log("\n");
 
 
 }
