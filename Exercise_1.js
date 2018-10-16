@@ -1,19 +1,21 @@
  function ques1() {
+    console.log("question : 1");
+    var date = new Date();
+    var day = date.getDay();
+    var cur_hour = date.getHours();
+    var cur_min = date.getMinutes();
+    var cur_sec=date.getSeconds();
+    var day_list=["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    console.log(month+'/'+date.getDate()+'/'+year);
+    console.log("end of question 1 ");
+
+    console.log("\n");
     
 }
-         console.log("question : 1");
-         var date = new Date();
-         var day = date.getDay();
-         var cur_hour = date.getHours();
-         var cur_min = date.getMinutes();
-         var cur_sec=date.getSeconds();
-         var day_list=["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-         var month = date.getMonth();
-         var year = date.getFullYear();
-         console.log(month+'/'+date.getDate()+'/'+year);
-         console.log("end of question 1 ");
+         
 
-         console.log("\n");
 //second question
  function ques2(){
          console.log("question :2");
@@ -277,20 +279,59 @@ function  ques14(employee){
     }
     console.log("\n");
     //sorting based on age
+    var employee_temp = employee;
     for(var i=0;i<len-1;i++){
         for(var j=i+1;j<len;j++){
-            if(employee[i].age<=employee[j].age){
+            if(employee_temp[i].age<=employee_temp[j].age){
+                var temp = employee_temp[i];
+                employee_temp[i]=employee_temp[j];
+                employee_temp[j]=temp;
+            }
+        }
+    }
+    for(var i=0;i<len;i++){
+        console.log(employee_temp[i]);
+    }
+    console.log("\n");
+    //get the occupations into a list
+    //sort based on occupation and then add the occupations into list
+    var occ=[];
+    for(var i=0;i<len-1;i++){
+        for(var j=i+1;j<len;j++){
+            if(employee[i].occupation>=employee[j].occupation){
                 var temp = employee[i];
                 employee[i]=employee[j];
                 employee[j]=temp;
             }
         }
     }
-    for(var i=0;i<len;i++){
-        console.log(employee[i]);
+    for(i=0;i<len-1;i++){
+        if(employee[i].occupation !=employee[i+1].occupation){
+            occ.push(employee[i].occupation);
+        }
     }
+    occ.push(employee[len-1].occupation);
+    var person={};
+    var temp_array=[];
+    for(var i=0;i<occ.length;i++){
+        for(var j=0;j<len;j++){
+            if(occ[i]==employee[j].occupation){
+                temp_array.push(employee[j]);
+            }     
+        }
+        
+        person[occ[i]]=temp_array;
+        temp_array=[];
+    }
+    console.log("\n");
+    console.log("person details separated with occupations:\n");
+    console.log(person);
+    console.log("\n");
+    //using map to output names
 
     
+   var name_map =employee.map(employee => employee.name); 
+    console.log(name_map);
 
 
 
@@ -323,6 +364,7 @@ function  ques14(employee){
     ques12('gmail.com', 'm');
     var result = ques13([5,[22],[[14]],[[4]],[5,6]]);
     console.log(result);
+    console.log("\n");
     ques14([{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},
     {'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},
     {'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
