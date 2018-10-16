@@ -368,53 +368,8 @@ function ques16(){
 
 }
 
-function ques17(json){
-    var article=json.articles;
-    for(var i=0;i<article.length;i++){
-        delete article[i]["url"];
-        delete article[i]["urlToImage"];
-        delete article[i]["publishedAt"];
-    }
-    
-
-    console.log(article);
-}
-
-
-
-
-
-    ques1();
-    ques2();
-    ques3(25468);
-    ques4(['quick','lazy','new','apple','fox']);
-    ques5([1,24,2,24,1,45]);
-    ques6([1,19,24,1,42],[4,54,18,0,21]);
-    ques7();
-    ques8("new@gmail.com");
-    ques9();
-    ques10(student_details = [
-        {name: "david",marks: 80},
-        {name: "vinoth",marks: 77},
-        {name: "divya",marks: 88},
-        {name: "ishitha",marks: 95},
-        {name: "thomas",marks: 68}
-    ]);
-    ques11("webmaster");
-    ques12('gmail.com', 'm');
-    var result = ques13([5,[22],[[14]],[[4]],[5,6]]);
-    console.log(result);
-    console.log("\n");
-    ques14([{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},
-    {'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},
-    {'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
-    {'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
-    {'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
-    {'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}]);
-
-    ques15();
-    ques16();
-    ques17( {
+function ques17(){
+    var json={
         "status": "ok",
         "source": "the-next-web",
         "sortBy": "latest",
@@ -467,4 +422,50 @@ function ques17(json){
         "urlToImage": "https://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/11/disney.gif",
         "publishedAt": "2016-11-29T16:00:56Z"
         }]
-        });
+        };
+    var article=json.articles;
+    for(var i=0;i<article.length;i++){
+        delete article[i]["url"];
+        delete article[i]["urlToImage"];
+        delete article[i]["publishedAt"];
+    }
+    
+
+    console.log(article);
+}
+
+
+
+
+
+    ques1();
+    ques2();
+    ques3(25468);
+    ques4(['quick','lazy','new','apple','fox']);
+    ques5([1,24,2,24,1,45]);
+    ques6([1,19,24,1,42],[4,54,18,0,21]);
+    ques7();
+    ques8("new@gmail.com");
+    ques9();
+    ques10(student_details = [
+        {name: "david",marks: 80},
+        {name: "vinoth",marks: 77},
+        {name: "divya",marks: 88},
+        {name: "ishitha",marks: 95},
+        {name: "thomas",marks: 68}
+    ]);
+    ques11("webmaster");
+    ques12('gmail.com', 'm');
+    var result = ques13([5,[22],[[14]],[[4]],[5,6]]);
+    console.log(result);
+    console.log("\n");
+    ques14([{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},
+    {'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},
+    {'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
+    {'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
+    {'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
+    {'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}]);
+
+    ques15();
+    ques16();
+    ques17();
