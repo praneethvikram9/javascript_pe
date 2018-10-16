@@ -37,9 +37,7 @@
 //third question
 function ques3(n){
     console.log("question : 3");
-    console.log("enter the number");
     //convert int to string and then insert -  in between even digits
-    var prev,next;
     var temp = n.toString();
     const string=[temp[0]];
     
@@ -330,13 +328,47 @@ function  ques14(employee){
     //using map to output names
 
     
-   var name_map =employee.map(employee => employee.name); 
+   var name_map =employee.map(employee => employee.name);
+   console.log("only names :"); 
     console.log(name_map);
 
 
 
     console.log("end of question 14:");
     console.log("\n");
+
+}
+
+
+function ques15(){
+    var jsonStr = '{"mike":"Book","jason":"sweater","chels":"iPad"}';
+    var jsonObj = JSON.parse(jsonStr);
+    console.log(jsonObj);
+    console.log("end of question 15");
+    console.log("\n");
+
+}
+
+function ques16(){
+    var obj = {
+        "One":"1",
+        "Two":"2",
+        "Three":"3",
+        "Four":"4"
+        }
+       var result = [];
+       for(var key in obj){
+           if(obj.hasOwnProperty(key)){
+               result.push(obj[key]);
+           }
+       }
+       console.log(result);
+       console.log("end of question 16");
+       console.log("\n");
+
+}
+
+function ques17(){
 
 }
 
@@ -371,3 +403,7 @@ function  ques14(employee){
     {'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
     {'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
     {'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}]);
+
+    ques15();
+    ques16();
+    ques17();
